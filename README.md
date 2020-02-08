@@ -1,10 +1,14 @@
 # minecraft-programming-with-kids
 
 
-## How to disable auto-pause when the window loses focus
+## disable auto-pause when the window loses focus
 
 Pressing P while holding F3 
 
-## How to switch out of the window
+## switch out of the window
 
 Press Command + Tab
+
+## switch Survial and Creative game mode
+
+Press N while holding F3
