@@ -1,7 +1,12 @@
-FROM nimmis/spigot
+FROM openjdk:7-jre-alpine
 
-ENV EULA=true
+WORKDIR /minecraft
+
+COPY spigot-1.15.2.jar ./
+COPY eula.txt ./
+COPY server.properties ./
+COPY plugins ./plugins
 RUN mkdir -p /minecraft/plugins && \
 	wget https://github.com/zhuowei/RaspberryJuice/blob/master/jars/raspberryjuice-1.12.1.jar?raw=true -O /minecraft/plugins/raspberryjuice.jar 
-COPY 95_turn_off_online_mode /etc/my_runalways/95_turn_off_online_mode
 
+CMD ["java", "-jar", "spigot-1.15.2.jar"]
